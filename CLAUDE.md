@@ -85,10 +85,5 @@ Branch flow: GitFlow, PRs into `develop`; never push to develop/main (hooks bloc
 
 Claude Code loads each rule below automatically when you touch the matching paths. OpenCode and Codex do NOT: read the rule BEFORE editing matching files.
 
-| When touching | Read |
-|---|---|
-| `src/**` | `.claude/rules/components-and-tokens.md` |
-| `.dockerignore`, `vite.config.ts`, `vitest.config.ts`, `package.json`, `.github/**`, `Makefile` | `.claude/rules/consumer-builds.md` |
-
-Hooks (`scripts/harness/hook.py`, wired for Claude Code, Codex and OpenCode) block pushes to develop/main, `--no-verify`, bare `rm -rf`, and edits to generated files, and feed lint findings back after each edit. Before saying "done" run `make check-fast`; the full gate is `make check-all`. `HARNESS_OFF=1` disables the hooks when debugging the harness itself.
+Hooks (`scripts/harness/hook.py`, wired for Claude Code, Codex and OpenCode) block pushes to develop/main, `--no-verify`, bare `rm -rf`, and edits to generated files, and feed gofmt/vet findings back after each edit. Before saying "done" run `make check-fast`; the full gate is `make check-all`. `HARNESS_OFF=1` disables the hooks when debugging the harness itself.
 <!-- harness:scoped-rules:end -->
