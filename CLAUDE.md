@@ -3,10 +3,10 @@
 harness-template: v3
 
 Shared design tokens and React component library for the `warehouse-systems`
-micro-frontend console. Consumed by `warehouse-console` (the shell) and every
-remote micro-frontend (`order-mgmt-mfe`/`inventory-mfe`/`planning-mfe`/
-`fulfillment-mfe`/`workforce-mfe`/`facility-mfe`/`process-path-mfe`/
-`labor-mfe`), each living inside its own bounded-context repo's `web/`.
+micro-frontend console. Consumed by `warehouse-console` (the shell) and the
+13 remote micro-frontends that live in the bounded-context repos' `web/`
+(every context whose web package manifest depends on `@warehouse/ui-kit`;
+warehouse-ops-agent and slotting-optimization have no `web/`).
 
 > **Study project.** Personal DDD/hexagonal/micro-frontend learning exercise.
 > Not a production system; no uptime or support guarantee.

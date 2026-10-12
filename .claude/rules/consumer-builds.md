@@ -14,7 +14,7 @@ Detail moved out of CLAUDE.md. The hard rules stay in CLAUDE.md's non-negotiable
 
 ## Why `.dockerignore` excludes `node_modules` and `dist`
 
-Nine sibling frontend images (the `warehouse-console` shell and the bounded-context
+Fourteen sibling frontend images (the `warehouse-console` shell and the 13 bounded-context
 remotes) receive this checkout as a named Docker build context
 (`docker build --build-context uikit=../../warehouse-ui-kit .`). A host `node_modules`
 holds only darwin bindings (`@rolldown/binding-darwin-arm64`, `lightningcss-darwin-*`,
