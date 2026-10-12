@@ -105,7 +105,7 @@ formats through `utils/format`, and the three charts share `chartCommon.ts`. `St
 | `build.lib.formats` / `fileName` | `["es"]`, `ui-kit.${format}.js` | `dist/ui-kit.es.js` (ESM only, no CJS/UMD) |
 | `build.rollupOptions.external` | `react`, `react-dom`, `react/jsx-runtime` | React is never bundled; the host supplies one copy |
 | `build.cssCodeSplit` | `false` | All CSS (tokens + component sheets) folds into one `dist/ui-kit.css` |
-| `vite-plugin-dts` | `tsconfigPath: tsconfig.app.json`, `insertTypesEntry: true` | Declarations under `dist/src/` (entry `dist/src/index.d.ts`); test files are excluded from that project so they never enter the public types |
+| `vite-plugin-dts` | `tsconfigPath: tsconfig.app.json`, `insertTypesEntry: true` | Declarations under `dist/src/` (entry `dist/src/index.d.ts`, the path `package.json` `types` points at) plus a top-level `dist/index.d.ts` types entry; test files are excluded from that project so they never enter the public types |
 
 `dist/` is gitignored, so a fresh checkout has no JS or types until the build runs.
 
