@@ -11,9 +11,27 @@ sidebar_label: Introduction
 backend by itself and has no runtime of its own. It is a **frontend library** consumed by:
 
 - `warehouse-console`, the Module Federation shell (host);
-- every remote micro-frontend (`order-mgmt-mfe`, `inventory-mfe`, `planning-mfe`,
-  `fulfillment-mfe`, `workforce-mfe`, `facility-mfe`), each living in its own
-  bounded-context repo.
+- every remote micro-frontend, each living in the `web/` folder of its own
+  bounded-context repo. On `origin/develop` of those repos, thirteen `web/package.json`
+  files declare `"@warehouse/ui-kit": "file:../../warehouse-ui-kit"`:
+
+  | Repo | Remote package name |
+  |---|---|
+  | order-management | `order_mgmt_mfe` |
+  | inventory-storage | `inventory-mfe` |
+  | wes-work-planning | `planning-mfe` |
+  | fulfillment-execution | `fulfillment-mfe` |
+  | workforce-management | `workforce-mfe` |
+  | facility-layout | `facility-mfe` |
+  | process-path-management | `process-path-mfe` |
+  | labor-performance | `labor-mfe` |
+  | network-fulfillment | `netfulfil-mfe` |
+  | warehouse-planning | `capacity-mfe` |
+  | product-master | `productmaster-mfe` |
+  | network-inventory-planning | `nip-mfe` |
+  | inbound-receiving | `inbound-mfe` |
+
+  `warehouse-ops-agent` and `slotting-optimization` have no `web/` remote.
 
 Because every remote and the shell render through the same kit, it is the one place that
 decides how the console looks and how domain facts are written on screen.
