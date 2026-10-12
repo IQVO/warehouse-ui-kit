@@ -64,6 +64,6 @@ built image and fetch through the real gateway path rather than inspecting
 ## Pitfalls
 
 - Never change a consumer's `vite.config.ts` to callback form to work around this.
-- Changing an export's name or props is a breaking change for up to nine consumers; grep
+- Changing an export's name or props is a breaking change for up to 14 consumers; grep
   them (`grep -rn "@warehouse/ui-kit" ../*/web/src ../warehouse-console/src`) before merging.
 - Keep Action SHAs pinned when editing `.github/workflows/ci.yml` here.
