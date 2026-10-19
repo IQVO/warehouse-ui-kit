@@ -1,6 +1,6 @@
 # Project: warehouse-ui-kit (@warehouse/ui-kit)
 
-harness-template: v3
+harness-template: v4
 
 Shared design tokens and React component library for the `warehouse-systems`
 micro-frontend console. Consumed by `warehouse-console` (the shell) and the
