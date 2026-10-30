@@ -19,12 +19,12 @@ A remote hand-rolling its own palette or status colors instead of consuming thes
 not a style choice — visual consistency across a micro-frontend boundary is the #1 place MFE
 UX fails.
 
-## Study project disclaimer
+## Disclaimer
 
-This repository, and every other repository in the `warehouse-systems` set, is a personal
-study project exploring Domain-Driven Design, hexagonal architecture, and (for this repo)
-micro-frontend composition patterns. It is not production software and has no support
-guarantees.
+This project is a domain-driven design study. It is not associated with,
+endorsed by or affiliated with any company, and it uses no company's code,
+data, logos or trademarks. All names, figures and examples are illustrative
+or synthetic.
 
 ## Documentation
 
@@ -96,3 +96,7 @@ Every chart takes a `{ label, value }[]`, an optional `formatValue`, and an `emp
 (defaulting to `No data.`) so no screen ships a silent blank box. All colors and spacing come
 from `tokens.css`; because CSS custom properties are invalid inside SVG presentation
 attributes, the charts set `fill`/`stroke` through `style` rather than as attributes.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
