@@ -1,5 +1,7 @@
 # @warehouse/ui-kit
 
+[![CI](https://github.com/IQVO/warehouse-ui-kit/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/IQVO/warehouse-ui-kit/actions/workflows/ci.yml?query=branch%3Adevelop) [![docs](https://img.shields.io/badge/docs-iqvo.github.io-blue)](https://iqvo.github.io/warehouse-ui-kit/) [![license](https://img.shields.io/badge/license-MIT-blue)](https://github.com/IQVO/warehouse-ui-kit/blob/develop/LICENSE)
+
 Shared design tokens and React component library for the
 [warehouse-systems](https://github.com/IQVO) micro-frontend console. Consumed by
 `warehouse-console` (the shell) and every remote micro-frontend in a bounded-context repo's
